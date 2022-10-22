@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {color: rgb(57, 55, 55);
+           background-color: rgb(194, 239, 225);
+           font-family:sans-serif;
+        }
+
+        #mainDiv {
+            margin-left: 250px;
+            padding: 50px;
+            justify-content: center;
+            border: 1px solid rgb(146, 145, 145);
+            min-width: 250px;
+            max-width: 500px;
+            box-shadow: 7px 7px 7px rgb(122, 120, 120);
+            height:200px;
+        }
+        
+        button{
+            background-color: rgb(150, 176, 197);
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-left: 480px;
+            margin-top: 50px;
+        }
+        button:hover{box-shadow: 3px 3px 3px rgba(109, 111, 111, 0.887);
+        transition: 0.6s;}
+    </style>
+</head>
+
+<!-- creating elements for text -->
+    <div id="mainDiv">
+        <h1>Get Your Daily Quote</h1>
+        <div id="demo">
+        </div>
+    </div>
+    <!-- creating button for new quote -->
+    <button type="button" id="click" onclick="car()">Click me for New Quote</button>
+    <script>
+        // creating an Arrya and elements as quote
+        const arr = ["Beware of advice,even this:<br> <b>Carl Sandburg</b>",
+            "It is perfectly okay to write Garbadge As Long as you Edit Brilliantly:<br><b> C.J Cherryh </b>",
+            " You can always edit a bad page.You can not edit a blank Page:<br><b> Jodi Picoult<b>",
+            "If you want to be live a happy life ,Tie it to a goal not to people or things:<br><b>Albert Einstein</b>",
+            "People says time will make things well as it will go but if don't do anything it will destroy everything as it will go",
+            "A book is simply the container of an idea—like a bottle; what is inside the book is what matters:<br><b>Angela Carter</b>"];
+                
+            // fuction for getting a random number from math.random method
+              function car() {
+            // creating a variable for storing the number that we get from math.random method
+            let getRandomNumber = Math.floor(Math.random() * 6);
+             // printing the element of array Randomly in div from the no. that we have got from math.random method
+            document.getElementById("demo").innerHTML = arr[getRandomNumber];  }
+            
+    </script>
+</body>
+
+</html>
